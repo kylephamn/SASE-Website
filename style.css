@@ -81,6 +81,7 @@ body, ul, li {
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove inline display space */
     margin: 0 auto; /* Center the image */
+    margin-top: 20px;
 }
 
 /* Hide the hamburger menu by default */

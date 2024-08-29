@@ -17,8 +17,8 @@ body, ul, li {
 }
 
 .navbar .logo {
-    max-width: 20vw; /* Make the logo size responsive */
-    margin-right: 20px; /* Space between the logo and the nav items */
+    max-width: 10vw; /* Make the logo size responsive */
+    margin-right: 10px; /* Space between the logo and the nav items */
     height: auto; /* Maintain aspect ratio */
 }
 
