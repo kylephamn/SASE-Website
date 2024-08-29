@@ -6,50 +6,41 @@ body, ul, li {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* Ensure body takes full height and width */
-body {
-    background-color: rgb(123, 204, 99);
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Navigation bar styling */
 .navbar {
-    background-color: #004d00; /* Dark green background for the navbar */
+    background-color: rgb(30, 77, 43); /* Dark green background for the navbar */
     padding: 10px 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    flex-wrap: wrap; /* Wrap navbar items on smaller screens */
 }
 
 .navbar .logo {
-    max-width: 20vw; /* Responsive size for logo */
-    height: auto;
+    max-width: 20vw; /* Make the logo size responsive */
+    margin-right: 20px; /* Space between the logo and the nav items */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .navbar ul {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centers the navbar items */
     align-items: center;
-    flex-grow: 1;
-    flex-wrap: wrap;
+    flex-grow: 1; /* Allows the nav items to take up remaining space */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .navbar li {
-    margin: 10px;
+    margin: 0 5px; /* Space between each nav item */
 }
 
 .navbar a {
     text-decoration: none;
-    color: white;
+    color: white; /* White text color */
     font-weight: bold;
     padding: 10px 15px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    display: block;
     text-align: center;
 }
 
@@ -57,6 +48,26 @@ body {
     background-color: #006600; /* Slightly lighter green on hover */
 }
 
+/* Header container styling */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the items horizontally */
+    text-align: center; /* Ensures text is centered within the header-text div */
+    margin-top: 10px; /* Adjust this value to control the gap */
+    padding: 0 5%; /* Padding for responsive spacing */
+    flex-wrap: wrap; /* Allows wrapping of header items */
+}
+
+.header-text h1, .header-text h2, .header-text h3, .header-text h4 {
+    margin: 0;
+    font-size: calc(1.5rem + 1vw); /* Responsive font size */
+}
+
+/* Paragroup styling */
+.paragroup-text p1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 /* Hide the hamburger menu by default */
 .hamburger {
     display: none;
@@ -72,48 +83,27 @@ body {
     border-radius: 5px;
 }
 
-/* Header container styling */
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 10px;
-    padding: 0 5%;
-}
-
-.header-text h1, .header-text h2, .header-text h3 {
-    margin: 5px 0;
-}
-
-/* Image Styling */
-.image {
-    max-width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    margin-top: 20px;
-}
-
-/* Responsive media queries */
+/* Responsive Media Queries */
 @media (max-width: 768px) {
     .navbar {
-        padding: 10px 10px;
-        flex-direction: column; /* Stack navbar items vertically */
+        flex-direction: column; /* Stack navbar items vertically on small screens */
     }
     
     .navbar ul {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column; /* Stack navbar links vertically */
+        align-items: center;
     }
 
-    .navbar li {
-        margin: 5px 0;
+    .header-container {
+        flex-direction: column; /* Stack header content vertically */
+        padding: 0 20px; /* Add padding for smaller screens */
     }
-    
-    .header-text h1, .header-text h2, .header-text h3 {
-        font-size: 1.5em; /* Reduce font size on smaller screens */
+
+    .bio-card {
+        width: calc(100% - 40px); /* Full width minus gaps on small screens */
     }
-    
-    .image {
-        max-width: 80%; /* Reduce image size slightly */
+
+    .bio-photo {
+        max-width: 100px; /* Reduce photo size for small screens */
     }
 }
