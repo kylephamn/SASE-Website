@@ -13,39 +13,55 @@ body, ul, li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; /* Wrap items on smaller screens */
+    flex-wrap: wrap;
+    position: relative; /* For positioning the hamburger menu */
 }
 
 .navbar .logo {
-    max-width: 20vw; /* Responsive logo size */
-    margin-right: 20px; /* Space between the logo and the nav items */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 150px; /* Adjust the size of the logo */
 }
 
-.navbar ul {
-    display: flex;
-    justify-content: center; /* Centers the navbar items */
-    align-items: center;
-    flex-grow: 1; /* Allows the nav items to take up remaining space */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+/* Hide the hamburger menu by default */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
 }
 
-.navbar li {
-    margin: 0 8px; /* Space between each nav item */
-}
-
-.navbar a {
-    text-decoration: none;
-    color: white; /* White text color */
-    font-weight: bold;
-    padding: 10px 15px;
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin-bottom: 4px;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
-    text-align: center;
 }
 
-.navbar a:hover {
-    background-color: #006600; /* Slightly lighter green on hover */
+/* For mobile screens */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the nav links by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust according to your navbar height */
+        right: 0;
+        background-color: #004d00;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Show the nav links when active */
+    }
+
+    .hamburger {
+        display: flex; /* Show the hamburger menu on mobile screens */
+    }
+
+    .navbar a {
+        padding: 10px 15px;
+        text-align: center;
+        width: 100%;
+    }
 }
 
 /* Header container styling */
@@ -55,13 +71,11 @@ body, ul, li {
     justify-content: center; /* Centers the items horizontally */
     text-align: center; /* Ensures text is centered within the header-text div */
     margin-top: 10px; /* Adjust this value to control the gap */
-    padding: 0 5%; /* Padding for responsive spacing */
-    flex-wrap: wrap; /* Allows wrapping of header items */
 }
 
 .header-text h1, .header-text h2, .header-text h3 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0;
-    font-size: calc(1.5rem + 1vw); /* Responsive font size */
 }
 
 /* Calendar section styling */
@@ -75,7 +89,7 @@ body, ul, li {
 .calendar {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Wrap months on smaller screens */
+    flex-wrap: wrap;
 }
 
 .month {
@@ -83,17 +97,14 @@ body, ul, li {
     border: 2px solid #004d00;
     border-radius: 10px;
     padding: 15px;
-    width: calc(100% / 2 - 40px); /* Responsive width for two columns */
-    max-width: 250px;
+    width: 250px;
     margin: 10px;
-    box-sizing: border-box; /* Include padding and border in width */
 }
 
 .month h3 {
     color: #004d00;
     text-align: center;
     margin-bottom: 10px;
-    font-size: 1.2rem; /* Responsive font size */
 }
 
 .month ul {
@@ -105,29 +116,3 @@ body, ul, li {
     color: #333;
 }
 
-/* Responsive Media Queries */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Stack navbar items vertically on small screens */
-    }
-    
-    .navbar ul {
-        flex-direction: column; /* Stack navbar links vertically */
-        align-items: center;
-    }
-
-    .header-container {
-        flex-direction: column; /* Stack header content vertically */
-        padding: 0 20px; /* Add padding for smaller screens */
-    }
-
-    .month {
-        width: 100%; /* Full width on small screens */
-        max-width: 100%; /* Remove max-width on small screens */
-        margin: 10px 0; /* Adjust margin */
-    }
-
-    .month h3 {
-        font-size: 1.1rem; /* Smaller font size on small screens */
-    }
-}
