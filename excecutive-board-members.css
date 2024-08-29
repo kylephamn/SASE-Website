@@ -69,7 +69,7 @@ body, ul, li {
     justify-content: center;
     gap: 20px; /* Adds space between the cards */
     padding: 20px;
-    background-color: rgb(123, 204, 99); /* Background color for the bio section */
+    background-color: rgb(255, 255, 255); /* Background color for the bio section */
     border-radius: 10px;
     margin: 20px;
 }
@@ -89,7 +89,7 @@ body, ul, li {
 .bio-photo {
     width: 100%;
     max-width: 150px; /* Control the size of the photo */
-    border-radius: 50%; /* Make the photo circular */
+    /* border-radius: 50%; Make the photo circular */ /*temporarily disabled*/
     margin-bottom: 15px;
 }
 
