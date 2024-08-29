@@ -76,7 +76,7 @@ body, ul, li {
     font-size: 1.0em; /* Adjust size as needed */
 }
 
-.small-image-index {
+.small-image-index{
     max-width: 100%; /* Scale down to fit container width */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove inline display space */
