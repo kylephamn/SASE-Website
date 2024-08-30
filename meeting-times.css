@@ -116,13 +116,14 @@ body, ul, li {
     font-size: 1.2rem; /* Responsive font size */
 }
 
-.month ul {
+/* .month ul {
     padding-left: 15px;
-}
+} */
 
 .month ul li {
     margin-bottom: 5px;
     color: #333;
+    text-align: center;
 }
 
 /* Hide the hamburger menu by default */
@@ -130,14 +131,6 @@ body, ul, li {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-}
-
-.hamburger span {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin-bottom: 4px;
-    border-radius: 5px;
 }
 
 /* Responsive Media Queries */

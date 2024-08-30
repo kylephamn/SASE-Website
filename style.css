@@ -26,6 +26,7 @@ body, ul, li {
     justify-content: center; /* Centers the navbar items */
     align-items: center;
     flex-grow: 1; /* Allows the nav items to take up remaining space */
+    flex-wrap: wrap;
 }
 
 .navbar li {
@@ -52,6 +53,7 @@ body, ul, li {
     justify-content: center; /* Centers the items horizontally */
     text-align: center; /* Ensures text is centered within the header-text div */
     margin-top: 10px; /* Adjust this value to control the gap */
+    padding: 0 5%;
 }
 
 .header-text h1, .header-text h2, .header-text h3 {
