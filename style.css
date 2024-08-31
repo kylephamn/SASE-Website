@@ -17,7 +17,7 @@ body, ul, li {
 
 .navbar .logo {
     max-width: 150px; /* Adjust the size of the logo */
-    margin-right: auto; /* Space between the logo and the nav items */
+    margin-right: 5px; /* Space between the logo and the nav items */
     height: auto;
 }
 
@@ -78,12 +78,27 @@ body, ul, li {
     font-size: 1.0em; /* Adjust size as needed */
 }
 
-.small-image-index{
+.small-image-index {
     max-width: 100%; /* Scale down to fit container width */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Remove inline display space */
     margin: 0 auto; /* Center the image */
     margin-top: 20px;
+}
+
+/* Container for logos */
+div {
+    text-align: center; /* Centers inline elements within the div */
+}
+
+/* Logo styling */
+.ig_logo, .linktree_logo, .groupme_logo {
+    max-width: 15%; /* Set the max width for the logos */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px auto; /* Centers each logo */
+    display: inline-block; /* Allow logos to be centered */
+    vertical-align: middle; /* Align logos vertically */
+    
 }
 
 /* Hide the hamburger menu by default */
@@ -134,6 +149,9 @@ body, ul, li {
     .navbar .logo {
         display: block;
         margin: auto; /* Center logo */
+    }
+    .ig_logo, .linktree_logo, .groupme_logo {
+        max-width: 30%; /* Increase size on smaller screens for better visibility */
     }
 }
 
