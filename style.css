@@ -95,7 +95,7 @@ div {
 .ig_logo, .linktree_logo, .groupme_logo {
     max-width: 15%; /* Set the max width for the logos */
     height: auto; /* Maintain aspect ratio */
-    margin: 20px auto; /* Centers each logo */
+    margin: 20px 10px; /* Add space around each logo */
     display: inline-block; /* Allow logos to be centered */
     vertical-align: middle; /* Align logos vertically */
     
@@ -152,6 +152,7 @@ div {
     }
     .ig_logo, .linktree_logo, .groupme_logo {
         max-width: 30%; /* Increase size on smaller screens for better visibility */
+        margin: 20px 5px; /* Adjust spacing on mobile for better fit */
     }
 }
 
