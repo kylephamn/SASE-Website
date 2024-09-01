@@ -108,6 +108,24 @@ div {
     cursor: pointer;
 }
 
+/* Container for centering the Instagram embed */
+.instagram-embed-container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    margin: 0 auto; /* Center the container itself */
+    /* padding: 20px; Optional: adds padding around the embed */
+}
+
+/* Styling for the Instagram embed blockquote */
+.instagram-embed-container blockquote.instagram-media {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    max-width: 100%; /* Ensure it scales responsively */
+    border: none; /* Remove any default border */
+    box-shadow: none; /* Remove any default shadow */
+    width: 100%; /* Make sure it fits the container */
+}
 
 /* Media query for mobile */
 @media (max-width: 768px) {
@@ -153,6 +171,13 @@ div {
     .ig_logo, .linktree_logo, .groupme_logo {
         max-width: 30%; /* Increase size on smaller screens for better visibility */
         margin: 20px 5px; /* Adjust spacing on mobile for better fit */
+    }
+
+    /* Media query for responsive design */
+    @media (max-width: 768px) {
+        blockquote.instagram-media {
+            max-width: 90%; /* Adjust width for smaller screens */
+        }
     }
 }
 
