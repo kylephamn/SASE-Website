@@ -8,6 +8,7 @@ const fs = require('fs');
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json()); // Add this line to handle JSON if needed
 
 // Ensure the pictures directory exists
 const picturesDir = path.join(__dirname, 'pictures');
