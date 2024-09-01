@@ -62,11 +62,7 @@ app.get('/Gallery.html', (req, res) => {
 // Handle photo uploads
 app.post('/pictures', upload.single('photo'), (req, res) => {
     if (req.session.loggedIn) {
-        res.send(`
-            <p>Photo uploaded successfully</p>
-            <p><a href="/gallery2.html">Upload another photo</a></p>
-            <p><a href="/Gallery.html">Go to front-end gallery</a></p>
-        `);
+        res.redirect('/upload-success.html'); // Redirect to success page
     } else {
         res.redirect('/login.html');
     }
