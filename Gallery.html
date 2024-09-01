@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Society of Asian Scientists and Engineers Colorado State Chapter</title>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="https://brand.libarts.colostate.edu/wp-content/uploads/sites/79/2021/08/CSU-Ram-357-1200x1200.png" type="image/x-icon">
-  </head>
-
-  <body style="background-color:rgb(255, 255, 255);">
+</head>
+<body style="background-color:rgb(255, 255, 255);">
     <header>
       <nav class="navbar">
         <a href="/index.html">
@@ -23,14 +22,9 @@
           <li><a href="Executive-Board-Members.html">Executive Board Members</a></li>
           <li><a href="About-Us.html">About Us</a></li>
         </ul>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+        <a href="/login.html" class="redirect-btn">Login</a>
       </nav>
     </header>
-
     <main class="header-container">
         <div class="header-text">
             <h1>Society of Asian Scientists and Engineers</h1>  
@@ -38,11 +32,25 @@
             <h3>Gallery</h3>
         </div>
     </main>
-	<script src="index.js"></script>
+    <p>Pictures here :D <br></p>
+    <div id="gallery"></div>
 
-    <p1>
-        Pictures here :D <br> <!-- line break-->
-    </p1>
-  </body>
-
+    <script>
+        // Fetch and display images
+        fetch('/pictures-list')
+        .then(response => response.json())
+        .then(images => {
+            const gallery = document.getElementById('gallery');
+            images.forEach(image => {
+                const img = document.createElement('img');
+                img.src = `pictures/${image}`;
+                img.alt = image;
+                img.style.maxWidth = '200px';
+                img.style.margin = '10px';
+                gallery.appendChild(img);
+            });
+        })
+        .catch(err => console.error(err));
+    </script>
+</body>
 </html>

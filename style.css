@@ -46,6 +46,20 @@ body, ul, li {
     background-color: #006600; /* Slightly lighter green on hover */
 }
 
+/* Add this CSS for the login button */
+.login-button {
+    background-color: #008000; /* Green background for the login button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-button:hover {
+    background-color: #005900; /* Darker green on hover */
+}
+
 /* Header container styling */
 .header-container {
     display: flex;

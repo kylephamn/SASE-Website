@@ -8,18 +8,17 @@ body, ul, li {
 
 /* Navigation bar styling */
 .navbar {
-    background-color: rgb(30, 77, 43); /* Dark green background for the navbar */
+    background-color: #004d00; /* Dark green background for the navbar */
     padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .navbar .logo {
-    max-width: 10vw; /* Responsive logo size */
-    margin-right: 10px; /* Space between the logo and the nav items */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 150px; /* Adjust the size of the logo */
+    margin-right: 5px; /* Space between the logo and the nav items */
+    height: auto;
 }
 
 .navbar ul {
@@ -27,7 +26,7 @@ body, ul, li {
     justify-content: center; /* Centers the navbar items */
     align-items: center;
     flex-grow: 1; /* Allows the nav items to take up remaining space */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    flex-wrap: wrap;
 }
 
 .navbar li {
