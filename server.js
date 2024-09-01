@@ -26,8 +26,8 @@ app.use(session({
 app.use(express.static(path.join(__dirname)));
 
 // Simple username and password
-const username = 'admin';
-const password = 'password';
+const username = 'SASE';
+const password = 'RAMS24';
 
 // Multer configuration for file uploads
 const storage = multer.diskStorage({
