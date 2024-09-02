@@ -11,6 +11,12 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// Ensure the pictures directory exists
+const picturesDir = path.join(__dirname, 'pictures');
+if (!fs.existsSync(picturesDir)) {
+    fs.mkdirSync(picturesDir);
+}
+
 // Configure session middleware
 app.use(session({
     secret: 'your-secret-key',
@@ -18,8 +24,12 @@ app.use(session({
     saveUninitialized: true,
 }));
 
-// Serve static files (CSS, JS, HTML)
+// Serve static files (CSS, JS)
 app.use(express.static(path.join(__dirname)));
+
+// Simple username and password
+const username = 'SASE';
+const password = 'RAMS24';
 
 // Multer configuration for file uploads
 const storage = multer.diskStorage({
@@ -34,7 +44,7 @@ const upload = multer({ storage: storage });
 
 // Login endpoint
 app.post('/login', (req, res) => {
-    if (req.body.username === 'SASE' && req.body.password === 'RAMS24') {
+    if (req.body.username === username && req.body.password === password) {
         req.session.loggedIn = true;
         res.redirect('/gallery2.html');
     } else {
@@ -54,7 +64,7 @@ app.get('/Gallery.html', (req, res) => {
 // Handle photo uploads
 app.post('/pictures', upload.single('photo'), (req, res) => {
     if (req.session.loggedIn) {
-        res.redirect('/upload-success.html');
+        res.redirect('/upload-success.html'); // Redirect to a success page or the gallery
     } else {
         res.redirect('/login.html');
     }
@@ -74,7 +84,7 @@ app.get('/upload-success.html', (req, res) => {
 
 // Serve the Gallery Page with Images
 app.get('/pictures-list', (req, res) => {
-    fs.readdir(path.join(__dirname, 'pictures'), (err, files) => {
+    fs.readdir(picturesDir, (err, files) => {
         if (err) {
             return res.status(500).send('Unable to load images');
         }
@@ -83,7 +93,8 @@ app.get('/pictures-list', (req, res) => {
     });
 });
 
-// Start the server on port 3000 (or whichever port you prefer)
-app.listen(3000, () => {
-    console.log('Server running on http://localhost:3000');
+// Start the server
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Server running on http://localhost:${port}`);
 });
