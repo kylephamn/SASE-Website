@@ -48,7 +48,7 @@ body, ul, li {
 
 /* Add this CSS for the login button */
 .login-button {
-    background-color: #008000; /* Green background for the login button */
+    /* background-color: #008000; Green background for the login button */
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -57,7 +57,7 @@ body, ul, li {
 }
 
 .login-button:hover {
-    background-color: #005900; /* Darker green on hover */
+    background-color: #006600; /* Darker green on hover */
 }
 
 /* Header container styling */
