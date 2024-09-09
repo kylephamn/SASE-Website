@@ -101,6 +101,14 @@ body, ul, li {
     margin-top: 20px;
 }
 
+.poster {
+    max-width: 100%; /* Scale down to fit container width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove inline display space */
+    margin: 0 auto; /* Center the image */
+    margin-top: 20px;
+}
+
 /* Container for logos */
 div {
     text-align: center; /* Centers inline elements within the div */
@@ -129,6 +137,7 @@ div {
     justify-content: center; /* Horizontally center */
     align-items: center; /* Vertically center */
     margin: 0 auto; /* Center the container itself */
+    margin-top: 20px;
     /* padding: 20px; Optional: adds padding around the embed */
 }
 
@@ -140,6 +149,7 @@ div {
     border: none; /* Remove any default border */
     box-shadow: none; /* Remove any default shadow */
     width: 100%; /* Make sure it fits the container */
+    margin: 0
 }
 
 /* Media query for mobile */
@@ -191,9 +201,18 @@ div {
     }
 
     /* Media query for responsive design */
-        blockquote.instagram-media {
-            max-width: 90%; /* Adjust width for smaller screens */
-        }
+    blockquote.instagram-media {
+        max-width: 90%; /* Adjust width for smaller screens */
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .poster {
+        max-width: 90%;
+        display: block; /* Remove inline display space */
+        margin: 0 auto; /* Center the image */
+        margin-top: 20px;
+    }
 }
 
 
