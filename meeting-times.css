@@ -177,9 +177,15 @@ body, ul, li {
         margin: 2px 0;
     }
 
+    .calendar1 {
+        max-width: 80%;
+        margin-bottom: 20px;
+    }
+
     .navbar .logo {
         display: block;
         margin: auto; /* Center logo */
+        max-width: 50%;
     }
 
     .header-container {

@@ -149,9 +149,11 @@ div {
         align-items: center;
     }
     
+
     .navbar .logo {
-        margin: 0; /* Remove margin for mobile */
-        max-width: 120px; /* Adjust size for mobile */
+        display: block;
+        margin: auto; /* Center logo */
+        max-width: 50%;
     }
     
     .navbar ul {
@@ -189,11 +191,9 @@ div {
     }
 
     /* Media query for responsive design */
-    @media (max-width: 768px) {
         blockquote.instagram-media {
             max-width: 90%; /* Adjust width for smaller screens */
         }
-    }
 }
 
 
