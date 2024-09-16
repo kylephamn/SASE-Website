@@ -166,6 +166,10 @@ body, ul, li {
         display: flex; /* Show menu items when toggled */
     }
 
+    .navbar li {
+        margin-bottom: 8px;
+    }
+
     .hamburger {
         display: flex;
         flex-direction: column;

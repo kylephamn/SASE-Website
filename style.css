@@ -202,7 +202,7 @@ div {
     .ig_logo, .linktree_logo, .groupme_logo {
         max-width: 30%; /* Increase size on smaller screens for better visibility */
         margin: 20px 5px; /* Adjust spacing on mobile for better fit */
-    }
+    } 
 
     /* Media query for responsive design */
     blockquote.instagram-media {

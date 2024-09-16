@@ -47,6 +47,20 @@ body, ul, li {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
+/* Add this CSS for the login button */
+.login-button {
+    /* background-color: #008000; Green background for the login button */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-button:hover {
+    background-color: #006600; /* Darker green on hover */
+}
+
 /* Header container styling */
 .header-container {
     display: flex;
@@ -79,17 +93,29 @@ body, ul, li {
     font-size: 1.0em; /* Adjust size as needed */
 }
 
-.poster {
-    max-width: 50%; /* Scale down to fit container width */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove inline display space */
-    margin: 0 auto; /* Center the image */
-    margin-top: 20px;
+/* For the Mission Statement and its content */
+.mission-statement {
+    text-align: left; /* Aligns the heading to the left */
+    margin: 20px; /* Optional: Adds spacing for better readability */
+    padding-left: 10px;
 }
 
-/* Container for logos */
-div {
-    text-align: center; /* Centers inline elements within the div */
+.mission-body {
+    text-align: left; /* Aligns the body text to the left */
+    margin: 10px 20px; /* Optional: Adds margin around the body text */
+    padding-left: 10px;
+}
+
+
+
+/* Logo styling */
+.ig_logo, .linktree_logo, .groupme_logo {
+    max-width: 15%; /* Set the max width for the logos */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px 10px; /* Add space around each logo */
+    display: inline-block; /* Allow logos to be centered */
+    vertical-align: middle; /* Align logos vertically */
+    
 }
 
 /* Hide the hamburger menu by default */
@@ -97,6 +123,27 @@ div {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+}
+
+/* Container for centering the Instagram embed */
+.instagram-embed-container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    margin: 0 auto; /* Center the container itself */
+    margin-top: 20px;
+    /* padding: 20px; Optional: adds padding around the embed */
+}
+
+/* Styling for the Instagram embed blockquote */
+.instagram-embed-container blockquote.instagram-media {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    max-width: 100%; /* Ensure it scales responsively */
+    border: none; /* Remove any default border */
+    box-shadow: none; /* Remove any default shadow */
+    width: 100%; /* Make sure it fits the container */
+    margin: 0
 }
 
 /* Media query for mobile */
@@ -124,8 +171,9 @@ div {
     .navbar ul.show {
         display: flex; /* Show menu items when toggled */
     }
+
     .navbar li {
-        margin-bottom: 8px;
+        margin-bottom: 8px; /* Adds space between nav items */
     }
 
     .hamburger {
@@ -144,6 +192,17 @@ div {
     .navbar .logo {
         display: block;
         margin: auto; /* Center logo */
+    }
+    .ig_logo, .linktree_logo, .groupme_logo {
+        max-width: 30%; /* Increase size on smaller screens for better visibility */
+        margin: 20px 5px; /* Adjust spacing on mobile for better fit */
+    } 
+
+    /* Media query for responsive design */
+    blockquote.instagram-media {
+        max-width: 90%; /* Adjust width for smaller screens */
+        justify-content: center;
+        margin: 0 auto;
     }
 
     .poster {
