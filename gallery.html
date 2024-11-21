@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SASE CSU - Gallery</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="https://brand.libarts.colostate.edu/wp-content/uploads/sites/79/2021/08/CSU-Ram-357-1200x1200.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="index.html">
+        <img src="logos/SASE-Logo.png" alt="SASE CSU Logo" class="logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="meeting-times.html">Meeting Times</a></li>
+        <li><a href="next-event.html">Next Event</a></li>
+        <li><a href="communication-links.html">Communication Links</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="executive-board-members.html">Executive Board Members</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+  <main class="header-container">
+    <div class="header-text">
+      <h1>Society of Asian Scientists and Engineers</h1>  
+      <h2>Colorado State University Chapter</h2>
+      <h3>Gallery</h3>
+    </div>
+  </main>
+  <div id="gallery"></div>
+
+  <script>
+    // Fetch and display images
+    fetch('/pictures-list')
+      .then(response => response.json())
+      .then(images => {
+        const gallery = document.getElementById('gallery');
+        images.forEach(image => {
+          const img = document.createElement('img');
+          img.src = `pictures/${image}`;
+          img.alt = `SASE CSU Gallery Image - ${image}`;
+          img.style.maxWidth = '200px';
+          img.style.margin = '10px';
+          gallery.appendChild(img);
+        });
+      })
+      .catch(err => console.error(err));
+  </script>
+</body>
+</html>
