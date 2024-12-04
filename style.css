@@ -205,6 +205,20 @@ p img.calendar1 {
     color: #333;
 }
 
+/* LinkedIn Icon Styling */
+.linkedin-link {
+    color: rgb(72, 106, 71); /* LinkedIn brand color */
+    margin-left: 10px; /* Space between name and icon */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2em; /* Adjust icon size */
+}
+
+.linkedin-link:hover {
+    color: rgb(55, 83, 54); /* Darker LinkedIn color on hover */
+    transform: scale(1.2); /* Slight zoom effect */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
 /* Calendar Section (Meeting Times Page) */
 .calendar-section {
     padding: 20px;
