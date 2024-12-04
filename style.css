@@ -288,8 +288,90 @@ p img.calendar1 {
     text-align: center;
 }
 
+/* General Section Styling */
+.section-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping to the next line */
+    justify-content: center; /* Centers the content horizontally */
+    gap: 20px; /* Spacing between items */
+    margin: 20px auto;
+    max-width: 1200px; /* Restricts the overall width of the container */
+    padding: 20px;
+}
+
+/* Individual Section Cards */
+.section-card {
+    flex: 0 1 calc(50% - 20px); /* Each section takes up half the width with spacing */
+    background-color: #f4f4f4; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center;
+}
+
+/* Styling for Titles */
+.section-card h2 {
+    font-size: 1.8em;
+    color: #004d00; /* Dark green color */
+    margin-bottom: 15px;
+}
+
+/* Styling for Body Text */
+.section-card p {
+    font-size: 1.2em;
+    line-height: 1.6; /* Better line spacing */
+    color: #333; /* Dark gray text color */
+}
+
+/* CTA Section Styling */
+.cta-container {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cta-container h2 {
+    color: #004d00;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.cta-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #004d00; /* Blue for the button */
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #005582;
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
+    .section-container {
+        flex-wrap: wrap; /* Allows wrapping to new lines for smaller screens */
+    }
+
+    .section-card {
+        flex: 1 1 100%; /* Each card takes up full width on smaller screens */
+    }
+
     .navbar {
         flex-direction: column;
         align-items: center;
