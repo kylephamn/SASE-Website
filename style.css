@@ -111,7 +111,6 @@ div p {
     font-size: 1.2em; /* Adjust font size for readability */
     line-height: 1.6; /* Adds spacing between lines */
     margin: 20px 0; /* Adds vertical spacing around the text */
-    color: #333; /* Dark gray text color */
 }
 
 div img.small-image-index {
@@ -332,7 +331,7 @@ p img.calendar1 {
     margin: 40px auto;
     padding: 20px;
     background-color: #1e691e;
-    color: white;
+    color: #333;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -343,6 +342,26 @@ p img.calendar1 {
 }
 
 .cta-banner p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta-banner-index {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1e691e;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cta-banner-index h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.cta-banner-index p {
     font-size: 1.2em;
     margin-bottom: 20px;
 }
@@ -393,7 +412,6 @@ p img.calendar1 {
     max-width: 800px;
     padding: 20px;
     background-color: #f4f4f4;
-    color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -405,7 +423,7 @@ p img.calendar1 {
 }
 
 .cta-container p {
-    color: white;
+
     font-size: 1.2em;
     margin-bottom: 20px;
 }
