@@ -106,6 +106,32 @@ body, ul, li {
     font-size: 1.0em;
 }
 
+div p {
+    text-align: center; /* Centers the text horizontally */
+    font-size: 1.2em; /* Adjust font size for readability */
+    line-height: 1.6; /* Adds spacing between lines */
+    margin: 20px 0; /* Adds vertical spacing around the text */
+    color: #333; /* Dark gray text color */
+}
+
+div img.small-image-index {
+    display: block; /* Ensures the image behaves like a block-level element */
+    margin: 20px auto; /* Centers the image horizontally and adds vertical spacing */
+    max-width: 80%; /* Ensures the image is responsive */
+    border-radius: 10px; /* Adds rounded corners to the image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
+}
+
+/* Styling for the Calendar Image */
+p img.calendar1 {
+    display: block; /* Makes the image a block element for easier centering */
+    margin: 20px auto; /* Centers the image horizontally and adds vertical spacing */
+    max-width: 90%; /* Ensures the image scales with the screen size */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 8px; /* Adds subtle rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
 /* Gallery Page */
 .gallery {
     display: flex;
