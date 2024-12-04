@@ -7,7 +7,7 @@
     <meta name="keywords" content="SASE, Society of Asian Scientists and Engineers, Colorado State University, CSU, STEM, engineering, student organization, Asian culture, professional development, networking, career resources">
     <meta name="author" content="SASE CSU Web Development Team">
     <meta name="robots" content="index, follow">
-    <title>SASE CSU - Next Event</title>
+    <title>SASE CSU - Meeting Times</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="https://brand.libarts.colostate.edu/wp-content/uploads/sites/79/2021/08/CSU-Ram-357-1200x1200.png" type="image/x-icon">
     <script src="index.js"></script>
@@ -20,12 +20,12 @@
           <img src="logos/sase-logo.webp" alt="SASE CSU Logo" class="logo">
         </a>
         <ul class="nav-links">
-          <li><a href="meeting-times.html">Meeting Times</a></li>
-          <li><a href="next-event.html">Next Event</a></li>
-          <li><a href="communication-links.html">Communication Links</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="executive-board-members.html">Executive Board Members</a></li>
-          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="meeting-times">Meeting Times</a></li>
+          <li><a href="next-event">Next Event</a></li>
+          <li><a href="communication-links">Communication Links</a></li>
+          <li><a href="gallery">Gallery</a></li>
+          <li><a href="executive-board-members">Executive Board Members</a></li>
+          <li><a href="about-us">About Us</a></li>
         </ul>
         <div class="hamburger">
           <span></span>
@@ -39,15 +39,45 @@
       <div class="header-text">
         <h1>Society of Asian Scientists and Engineers</h1>  
         <h2>Colorado State University Chapter</h2>
-        <h3>Next Event!</h3>
-
+        <h3>Meeting Times</h3>
       </div>
     </main>
 
-    <div class="main-body">
-      <p>
-          Stay tuned for our next semester's events!
-      </p>
-    </div>
+    <section class="calendar-section">
+      <div class="calendar">
+        <div class="month">
+          <h3>August 2024</h3>
+          <ul>
+            <li>Monday 12th <br> 6:00 PM LSC</li>
+            <li>Monday 26th <br> 6:00 PM LSC</li>
+          </ul>
+        </div>
+        <div class="month">
+          <h3>September 2024</h3>
+          <ul>
+            <li>Monday 9th <br> 6:00 PM LSC333</li>
+            <li>Monday 23rd <br> 6:00 PM LSC333</li>
+          </ul>
+        </div>
+        <div class="month">
+          <h3>October 2024</h3>
+          <ul>
+            <li>Monday 7th <br> 6:00 PM LSC333</li>
+            <li>Monday 21st <br> 6:00 PM LSC333</li>
+          </ul>
+        </div>
+        <div class="month">
+          <h3>November 2024</h3>
+          <ul>
+            <li>Monday 4th <br> 6:00 PM LSC333</li>
+            <li>Monday 18th <br> 6:00 PM LSC333</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <p>
+      <img src="pictures/sase-fa24-calender.png" alt="SASE Fall 2024 Calendar" class="calendar1">
+    </p>
   </body>
 </html>

@@ -21,12 +21,12 @@
                 <img src="logos/sase-logo.webp" alt="SASE Logo" class="logo">
               </a>
               <ul class="nav-links">
-                <li><a href="meeting-times.html">Meeting Times</a></li>
-                <li><a href="next-event.html">Next Event</a></li>
-                <li><a href="communication-links.html">Communication Links</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="executive-board-members.html">Executive Board Members</a></li>
-                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="meeting-times">Meeting Times</a></li>
+                <li><a href="next-event">Next Event</a></li>
+                <li><a href="communication-links">Communication Links</a></li>
+                <li><a href="gallery">Gallery</a></li>
+                <li><a href="executive-board-members">Executive Board Members</a></li>
+                <li><a href="about-us">About Us</a></li>
               </ul>
           <div class="hamburger">
             <span></span>

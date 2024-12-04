@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the official website of the Society of Asian Scientists and Engineers (SASE) at Colorado State University. Join us for events, resources, and a vibrant community dedicated to STEM and Asian heritage.">
+    <meta name="keywords" content="SASE, Society of Asian Scientists and Engineers, Colorado State University, CSU, STEM, engineering, student organization, Asian culture, professional development, networking, career resources">
+    <meta name="author" content="SASE CSU Web Development Team">
+    <meta name="robots" content="index, follow">
+    <title>SASE CSU - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://brand.libarts.colostate.edu/wp-content/uploads/sites/79/2021/08/CSU-Ram-357-1200x1200.png" type="image/x-icon">
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="index.html">
+          <img src="logos/sase-logo.webp" alt="SASE CSU Logo" class="logo">
+        </a>
+        <ul class="nav-links">
+          <li><a href="meeting-times">Meeting Times</a></li>
+          <li><a href="next-event">Next Event</a></li>
+          <li><a href="communication-links">Communication Links</a></li>
+          <li><a href="gallery">Gallery</a></li>
+          <li><a href="executive-board-members">Executive Board Members</a></li>
+          <li><a href="about-us">About Us</a></li>
+        </ul>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <main class="header-container">
+      <div class="header-text">
+        <h1>Society of Asian Scientists and Engineers</h1>  
+        <h2>Colorado State University Chapter</h2>
+        <h3>Home Page</h3>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  
+    <div>
+      <p>
+        Welcome to the Colorado State University Chapter of SASE!<br> 
+        We are extremely excited to have you join us this year!<br>
+        <img src="logos/SASE-2.webp" alt="SASE First Meeting Photo" class="small-image-index">  
+      </p>
+    </div>
+  </body>
+</html>
