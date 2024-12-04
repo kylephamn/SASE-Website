@@ -257,31 +257,94 @@ p img.calendar1 {
     text-align: center;
 }
 
-/* Instagram Embed (Communication Links Page) */
-.instagram-embed-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 20px;
+.instagram-media {
+    max-width: 540px; /* Set max width to match Instagram embed's default */
+    width: 100%; /* Make it responsive */
+    min-width: 326px; /* Match Instagram's minimum width */
+    margin: 0 auto; /* Center the content inside the container */
 }
 
-.instagram-embed-container blockquote.instagram-media {
-    margin: 0;
-    padding: 0;
-    max-width: 100%;
-    border: none;
-    box-shadow: none;
-    width: 100%;
+.groupme-container {
+    text-align: center; /* Centers the button on the page */
+    margin: 20px auto;
 }
 
-/* Logo Styles (Communication Links Page) */
-.ig_logo, .linktree_logo, .groupme_logo {
-    max-width: 15%;
-    height: auto;
-    margin: 20px 10px;
+.groupme-button {
     display: inline-block;
-    vertical-align: middle;
+    background-color: #00aff0; /* GroupMe's blue color */
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.groupme-button:hover {
+    background-color: #007bb5; /* Darker blue on hover */
+}
+
+.map-container {
+    flex: 1; /* Make it flex for proportional space */
+    max-width: 500px; /* Adjust size for better visibility */
+    text-align: center;
+}
+
+.map-container h2 {
+    color: #004d00;
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.horizontal-container {
+    display: flex; /* Align items horizontally */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    gap: 50px; /* Equal spacing between all items */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    margin: 20px auto; /* Centers the container */
+    padding: 20px;
+    max-width: 1200px; /* Restrict overall width */
+}
+
+.instagram-embed-container {
+    max-width: 400px; /* Adjust width for better balance */
+    flex: 1; /* Make it flex for proportional space */
+    text-align: center;
+}
+
+.groupme-widget {
+    max-width: 150px; /* Adjust size for alignment */
+    flex: 0 0 auto; /* Fix the width so it doesn't stretch */
+    text-align: center;
+}
+
+.map-container iframe {
+    width: 75%; /* Make it responsive */
+    height: 300px; /* Adjust height for better visibility */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.cta-banner {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1e691e;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cta-banner h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.cta-banner p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 
 .main-body p {
@@ -342,13 +405,14 @@ p img.calendar1 {
 }
 
 .cta-container p {
+    color: white;
     font-size: 1.2em;
     margin-bottom: 20px;
 }
 
 .cta-button {
     display: inline-block;
-    background-color: #004d00; /* Blue for the button */
+    background-color: #004d00; 
     color: #fff;
     padding: 10px 20px;
     font-size: 1.2em;
@@ -358,9 +422,8 @@ p img.calendar1 {
 }
 
 .cta-button:hover {
-    background-color: #005582;
+    background-color: rgb(55, 83, 54);
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
