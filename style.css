@@ -63,7 +63,7 @@ body, ul, li {
 
 /* Hamburger Menu */
 .hamburger {
-    display: flex;
+    display: none;
     flex-direction: column;
     cursor: pointer;
 }
@@ -326,5 +326,11 @@ p img.calendar1 {
     blockquote.instagram-media {
         max-width: 90%;
         margin: 0 auto;
+    }
+
+    .hamburger {
+        display: flex; /* Show on smaller screens */
+        flex-direction: column;
+        cursor: pointer;
     }
 }
