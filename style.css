@@ -1,4 +1,4 @@
-/* General reset */
+/* General Reset (Applied Globally) */
 body, ul, li {
     margin: 0;
     padding: 0;
@@ -6,7 +6,9 @@ body, ul, li {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* Navigation bar styling */
+/* Common Styles */
+
+/* Navigation Bar */
 .navbar {
     background-color: #004d00; /* Dark green background for the navbar */
     padding: 10px 20px;
@@ -16,26 +18,26 @@ body, ul, li {
 }
 
 .navbar .logo {
-    max-width: 150px; /* Adjust the size of the logo */
-    margin-right: 5px; /* Space between the logo and the nav items */
+    max-width: 150px;
     height: auto;
+    margin-right: 5px;
 }
 
 .navbar ul {
     display: flex;
-    justify-content: center; /* Centers the navbar items */
+    justify-content: center;
     align-items: center;
-    flex-grow: 1; /* Allows the nav items to take up remaining space */
+    flex-grow: 1;
     flex-wrap: wrap;
 }
 
 .navbar li {
-    margin: 0 8px; /* Space between each nav item */
+    margin: 0 8px;
 }
 
 .navbar a {
     text-decoration: none;
-    color: white; /* White text color */
+    color: white;
     font-weight: bold;
     padding: 10px 15px;
     border-radius: 5px;
@@ -43,13 +45,11 @@ body, ul, li {
 }
 
 .navbar a:hover {
-    background-color: #006600; /* Slightly lighter green on hover */
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #006600;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
-/* Add this CSS for the login button */
 .login-button {
-    /* background-color: #008000; Green background for the login button */
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -58,165 +58,247 @@ body, ul, li {
 }
 
 .login-button:hover {
-    background-color: #006600; /* Darker green on hover */
+    background-color: #006600;
 }
 
-/* Header container styling */
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centers the items horizontally */
-    text-align: center; /* Ensures text is centered within the header-text div */
-    margin-top: 10px; /* Adjust this value to control the gap */
-    padding: 0 5%;
-}
-
-.header-text h1, .header-text h2, .header-text h3 {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 0;
-}  
-
-/* Scaling headers */
-.header-text h1 {
-    font-size: 2em; /* Adjust size as needed */
-}
-
-.header-text h2 {
-    font-size: 1.5em; /* Adjust size as needed */
-}
-
-.header-text h3 {
-    font-size: 1.2em; /* Adjust size as needed */
-}
-
-.header-text h4 {
-    font-size: 1.0em; /* Adjust size as needed */
-}
-
-.small-image-index {
-    max-width: 100%; /* Scale down to fit container width */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove inline display space */
-    margin: 0 auto; /* Center the image */
-    margin-top: 20px;
-}
-
-.poster {
-    max-width: 100%; /* Scale down to fit container width */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove inline display space */
-    margin: 0 auto; /* Center the image */
-    margin-top: 20px;
-}
-
-/* Container for logos */
-div {
-    text-align: center; /* Centers inline elements within the div */
-}
-
-/* Logo styling */
-.ig_logo, .linktree_logo, .groupme_logo {
-    max-width: 15%; /* Set the max width for the logos */
-    height: auto; /* Maintain aspect ratio */
-    margin: 20px 10px; /* Add space around each logo */
-    display: inline-block; /* Allow logos to be centered */
-    vertical-align: middle; /* Align logos vertically */
-    
-}
-
-/* Hide the hamburger menu by default */
+/* Hamburger Menu */
 .hamburger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
 }
 
-/* Container for centering the Instagram embed */
+.hamburger span {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 2px 0;
+}
+
+/* Header Container */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    padding: 0 5%;
+}
+
+.header-text h1, .header-text h2, .header-text h3, .header-text h4 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+.header-text h1 {
+    font-size: 2em;
+}
+
+.header-text h2 {
+    font-size: 1.5em;
+}
+
+.header-text h3 {
+    font-size: 1.2em;
+}
+
+.header-text h4 {
+    font-size: 1.0em;
+}
+
+/* Gallery Page */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Increase the gap between images */
+    padding: 20px;
+}
+
+.gallery img {
+    flex: 1 1 calc(25% - 20px); /* Adjust width to account for larger gaps */
+    max-width: calc(25% - 20px); /* Ensure consistency with gap */
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease; /* Optional hover effect */
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Bio Section (Executive Board Page) */
+.bio-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(72, 106, 71);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.bio-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: calc(100% / 3 - 40px);
+    max-width: 300px;
+    padding: 20px;
+    border: 2px solid #004d00;
+    border-radius: 10px;
+    background-color: #cdcdcd;
+    box-sizing: border-box;
+}
+
+.bio-photo {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 15px;
+    height: auto;
+}
+
+.bio-info h3 {
+    margin: 10px 0 5px 0;
+    font-size: 1.5em;
+    color: #004d00;
+}
+
+.bio-info h4 {
+    margin: 5px 0;
+    font-size: 1.2em;
+    color: #006600;
+}
+
+.bio-info p {
+    font-size: 1em;
+    color: #333;
+}
+
+/* Calendar Section (Meeting Times Page) */
+.calendar-section {
+    padding: 20px;
+    background-color: rgb(72, 106, 71);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.calendar {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.month {
+    background-color: #fff;
+    border: 2px solid #004d00;
+    border-radius: 10px;
+    padding: 15px;
+    width: calc(100% / 2 - 40px);
+    max-width: 250px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.month h3 {
+    color: #004d00;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.month ul li {
+    margin-bottom: 5px;
+    color: #333;
+    text-align: center;
+}
+
+/* Instagram Embed (Communication Links Page) */
 .instagram-embed-container {
     display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
-    margin: 0 auto; /* Center the container itself */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
     margin-top: 20px;
-    /* padding: 20px; Optional: adds padding around the embed */
 }
 
-/* Styling for the Instagram embed blockquote */
 .instagram-embed-container blockquote.instagram-media {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    max-width: 100%; /* Ensure it scales responsively */
-    border: none; /* Remove any default border */
-    box-shadow: none; /* Remove any default shadow */
-    width: 100%; /* Make sure it fits the container */
-    margin: 0
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    border: none;
+    box-shadow: none;
+    width: 100%;
 }
 
-/* Media query for mobile */
+/* Logo Styles (Communication Links Page) */
+.ig_logo, .linktree_logo, .groupme_logo {
+    max-width: 15%;
+    height: auto;
+    margin: 20px 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main-body p {
+    text-align: center;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
         align-items: center;
     }
-    
 
     .navbar .logo {
-        display: block;
-        margin: auto; /* Center logo */
         max-width: 50%;
     }
-    
+
     .navbar ul {
-        display: none; /* Hide menu items by default on mobile */
+        display: none;
         flex-direction: column;
         width: 100%;
         text-align: center;
-        padding: 0;
     }
-    
+
     .navbar ul.show {
-        display: flex; /* Show menu items when toggled */
+        display: flex;
     }
 
     .navbar li {
-        margin-bottom: 8px; /* Adds space between nav items */
+        margin-bottom: 8px;
     }
 
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
+    .gallery img {
+        flex: 1 1 calc(50% - 10px);
     }
 
-    .hamburger span {
-        background-color: white;
-        height: 3px;
-        width: 25px;
-        margin: 2px 0;
+    .bio-card {
+        width: calc(100% - 40px);
     }
 
-    .navbar .logo {
-        display: block;
-        margin: auto; /* Center logo */
+    .bio-photo {
+        max-width: 100px;
     }
+
+    .month {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .month h3 {
+        font-size: 1.1rem;
+    }
+
     .ig_logo, .linktree_logo, .groupme_logo {
-        max-width: 30%; /* Increase size on smaller screens for better visibility */
-        margin: 20px 5px; /* Adjust spacing on mobile for better fit */
-    } 
+        max-width: 30%;
+    }
 
-    /* Media query for responsive design */
     blockquote.instagram-media {
-        max-width: 90%; /* Adjust width for smaller screens */
-        justify-content: center;
+        max-width: 90%;
         margin: 0 auto;
     }
-
-    .poster {
-        max-width: 90%;
-        display: block; /* Remove inline display space */
-        margin: 0 auto; /* Center the image */
-        margin-top: 20px;
-    }
 }
-
-
