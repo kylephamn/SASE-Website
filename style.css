@@ -10,11 +10,11 @@ body, ul, li {
 
 /* Navigation Bar */
 .navbar {
-    background-color: #004d00; /* Dark green background for the navbar */
-    padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #004d00; /* Dark green */
 }
 
 .navbar .logo {
@@ -445,6 +445,14 @@ p img.calendar1 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body, p, h1, h2, h3, h4, h5, h6, li, div {
+        text-align: left !important; /* Force left alignment */
+    }
+
+    .nav-links a {
+        text-align: left; /* Ensure nav links are also left-aligned */
+    }
+    
     .section-container {
         flex-wrap: wrap; /* Allows wrapping to new lines for smaller screens */
     }
@@ -454,12 +462,12 @@ p img.calendar1 {
     }
 
     .navbar {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
-    .navbar .logo {
-        max-width: 50%;
+    .logo {
+        max-width: 100px; /* Adjust size for mobile */
     }
 
     .navbar ul {
@@ -475,6 +483,18 @@ p img.calendar1 {
 
     .navbar li {
         margin-bottom: 8px;
+    }
+
+    .nav-links {
+        display: none; /* Hide nav links by default on mobile */
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+    }
+
+    .nav-links.show {
+        display: flex; /* Show nav links when toggled */
     }
 
     .gallery img {
@@ -509,8 +529,15 @@ p img.calendar1 {
     }
 
     .hamburger {
-        display: flex; /* Show on smaller screens */
+        display: flex; /* Show hamburger on mobile */
         flex-direction: column;
         cursor: pointer;
+    }
+
+    .hamburger span {
+        background-color: white;
+        height: 3px;
+        width: 25px;
+        margin: 2px 0;
     }
 }
