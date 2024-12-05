@@ -445,7 +445,7 @@ p img.calendar1 {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    body, p, h1, h2, h3, h4, h5, h6, li, div {
+    body, p, h1, h2, h3, h4, h5, h6, div {
         text-align: left !important; /* Force left alignment */
     }
 
