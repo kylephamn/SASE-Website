@@ -449,10 +449,11 @@ p img.calendar1 {
         text-align: left !important; /* Force left alignment */
     }
 
-    .nav-links a {
-        text-align: left; /* Ensure nav links are also left-aligned */
+    div p {
+        padding: 0 15px; /* Add left and right padding */
+        text-align: center; /* Ensure text is centered */
     }
-    
+
     .section-container {
         flex-wrap: wrap; /* Allows wrapping to new lines for smaller screens */
     }
@@ -491,6 +492,7 @@ p img.calendar1 {
         width: 100%;
         text-align: left;
         padding: 10px;
+        text-align: center;
     }
 
     .nav-links.show {
@@ -528,10 +530,11 @@ p img.calendar1 {
         margin: 0 auto;
     }
 
-    .hamburger {
-        display: flex; /* Show hamburger on mobile */
+        .hamburger {
+        display: flex;
         flex-direction: column;
         cursor: pointer;
+        padding-right: 20px; /* Add right padding */
     }
 
     .hamburger span {
@@ -539,5 +542,17 @@ p img.calendar1 {
         height: 3px;
         width: 25px;
         margin: 2px 0;
+    }
+
+    .gallery {
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align the images */
+        gap: 20px; /* Add spacing between photos */
+    }
+
+    .gallery img {
+        max-width: 90%; /* Each photo takes up 90% of the phone's width */
+        height: auto; /* Maintain aspect ratio */
     }
 }
