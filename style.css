@@ -101,7 +101,7 @@ body, ul, li {
 
 section {
     margin: 40px auto;
-    max-width: 800px;
+    max-width: 90%;
     text-align: center;
     padding: 20px;
     border-radius: 10px;
@@ -168,13 +168,14 @@ p img.calendar1 {
 
 /* Bio Section (Executive Board Page) */
 .bio-section {
-    display: grid; /* Use grid for better layout control */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust number of columns dynamically */
-    gap: 30px; /* Add spacing between cards */
-    width: 100%;
-    padding: 40px; /* Add padding for better spacing */
-    background-color: rgb(72, 106, 71); /* Background color for section */
-    box-sizing: border-box; /* Ensure padding is included in the width/height */
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping for flexibility */
+    justify-content: space-evenly; /* Evenly distribute items across the container */
+    gap: 20px; /* Add spacing between items */
+    width: 100%; /* Ensure it spans the full width */
+    padding: 20px; /* Add padding for spacing */
+    background-color: rgb(72, 106, 71); /* Optional background for visual distinction */
+    box-sizing: border-box; /* Ensure padding is included in total width */
 }
 
 .bio-card {
@@ -524,7 +525,8 @@ p img.calendar1 {
     }
 
     .bio-card {
-        width: calc(100% - 40px);
+        flex: 1 1 100%; /* Each card takes up the full width */
+        max-width: 100%; /* Ensure no extra space */
     }
 
     .bio-photo {
