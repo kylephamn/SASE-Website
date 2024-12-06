@@ -133,6 +133,7 @@ div img.small-image-index {
     max-width: 80%; /* Ensures the image is responsive */
     border-radius: 10px; /* Adds rounded corners to the image */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
+    aspect-ratio: 16 / 9; /* Reserve space for the image */
 }
 
 /* Styling for the Calendar Image */
@@ -480,8 +481,10 @@ p img.calendar1 {
     }
 
     .logo {
-        max-width: 100px; /* Adjust size for mobile */
-    }
+        display: block;
+        width: 100px;
+        height: auto; /* Ensures correct aspect ratio */
+      }      
 
     .navbar ul {
         display: none;
