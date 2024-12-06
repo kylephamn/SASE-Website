@@ -78,15 +78,11 @@ body, ul, li {
 /* Header Container */
 .header-container {
     display: flex;
-    flex-direction: column; /* Stack header-text and bio-section vertically */
-    align-items: center; /* Center align content horizontally */
-    justify-content: flex-start; /* Ensure header-text stays at the top */
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-top: 20px; /* Optional: Adjust spacing from the top */
-}
-
-.header-text {
-    margin-bottom: 15px; /* Add spacing below the header text */
+    margin-top: 10px;
+    padding: 0 5%;
 }
 
 .header-text h1, .header-text h2, .header-text h3, .header-text h4 {
