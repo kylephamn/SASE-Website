@@ -168,13 +168,13 @@ p img.calendar1 {
 
 /* Bio Section (Executive Board Page) */
 .bio-section {
-    display: flex;
-    flex-wrap: wrap; /* Allow bio-cards to wrap */
-    justify-content: center; /* Center align the bio-cards */
-    gap: 20px; /* Add spacing between bio-cards */
+    display: grid; /* Use grid for better layout control */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust number of columns dynamically */
+    gap: 30px; /* Add spacing between cards */
     width: 100%;
-    padding: 20px; /* Add padding for better spacing */
-    background-color: rgb(72, 106, 71); /* Optional: Add a background color for visual distinction */
+    padding: 40px; /* Add padding for better spacing */
+    background-color: rgb(72, 106, 71); /* Background color for section */
+    box-sizing: border-box; /* Ensure padding is included in the width/height */
 }
 
 .bio-card {
@@ -193,12 +193,16 @@ p img.calendar1 {
     justify-content: space-between; /* Ensures consistent spacing */
 }
 
+.bio-card:hover {
+    transform: scale(1.03); /* Slight zoom on hover */
+}
+
 .bio-photo {
-    width: 150px; /* Set a fixed width */
-    height: 150px; /* Set a fixed height to avoid layout shifts */
-    object-fit: cover; /* Ensures the image scales properly */
-    /* border-radius: 50%; Optional: Circular shape for photos */
-    margin-bottom: 15px; /* Space below the photo */
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px; /* Adjust the radius for rounded corners */
+    margin-bottom: 15px;
 }
 
 .bio-info h3 {
@@ -216,6 +220,7 @@ p img.calendar1 {
 .bio-info p {
     font-size: 1em;
     color: #333;
+    line-height: 1.5;
 }
 
 /* LinkedIn Icon Styling */
