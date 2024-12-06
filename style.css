@@ -18,9 +18,9 @@ body, ul, li {
 }
 
 .navbar .logo {
-    max-width: 150px;
+    max-width: 100px;
     height: auto;
-    margin-right: 5px;
+    margin-left: 15px;
 }
 
 .navbar ul {
@@ -530,7 +530,7 @@ p img.calendar1 {
         margin: 0 auto;
     }
 
-        .hamburger {
+    .hamburger {
         display: flex;
         flex-direction: column;
         cursor: pointer;
@@ -553,6 +553,6 @@ p img.calendar1 {
 
     .gallery img {
         max-width: 90%; /* Each photo takes up 90% of the phone's width */
-        height: auto; /* Maintain aspect ratio */
+        height: 100px; /* Maintain aspect ratio */
     }
 }
