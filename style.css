@@ -577,4 +577,40 @@ p img.calendar1 {
         max-width: 90%; /* Each photo takes up 90% of the phone's width */
         height: 100px; /* Maintain aspect ratio */
     }
+
+    .interest-form-section {
+        padding: 1em;
+        text-align: center;
+      }
+
+      .interest-form-section h1 {
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+      }
+
+      .interest-form-section p {
+        font-size: 1em;
+        margin-bottom: 1em;
+      }
+
+      .interest-form-section iframe {
+        width: 100%;
+        max-width: 600px;
+        height: 600px;
+        border: none;
+      }
+
+      @media (max-width: 768px) {
+        .interest-form-section h1 {
+          font-size: 1.2em;
+        }
+
+        .interest-form-section p {
+          font-size: 0.9em;
+        }
+
+        .interest-form-section iframe {
+          height: 500px;
+        }
+      }
 }
